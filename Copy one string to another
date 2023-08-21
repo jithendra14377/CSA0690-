@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char a[100], k[100];
+	int l = strlen(a);
+	printf("Copy the string : ");
+	scanf("%s" , &a);
+	for(int i = 0;i < l;i++)
+	{
+		k[i] = a[i]; 
+	}
+	printf("Copied String is : %s" , k);
+}
