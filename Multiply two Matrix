@@ -1,0 +1,74 @@
+#include<stdio.h>
+int main()
+{
+	int matrix_1[100][100], matrix_2[100][100], matrix_1_R, matrix_1_C, matrix_2_R, matrix_2_C, i, j, resultant_matrix[100][100], sum = 0;
+	printf("Row of first matrix :");
+	scanf("%d" , &matrix_1_R);
+	printf("Column of first matrix :");
+	scanf("%d" , &matrix_1_C);
+	printf("Row of second matrix :");
+	scanf("%d" , &matrix_2_R);
+	printf("Column of second matrix :");
+	scanf("%d" , &matrix_2_C);
+	if(matrix_1_C != matrix_2_R)
+	{
+		printf("Matrix Multipilication is not possible.");
+	}
+	else
+	{
+		for(i = 0;i < matrix_1_R;i++)
+		{
+			for(j = 0;j < matrix_1_C;j++)
+			{
+				scanf("%d" , &matrix_1[i][j]);
+			}
+			printf("\n");
+		}
+		for(i = 0;i < matrix_2_R;i++)
+		{
+			for(j = 0;j < matrix_2_C;j++)
+			{
+				scanf("%d" , &matrix_2[i][j]);
+			}
+			printf("\n");
+		}
+		for(i = 0;i < matrix_1_R;i++)
+		{
+			for(j = 0;j < matrix_2_C;j++)
+			{
+				resultant_matrix[i][j] = 0;
+				for(int k = 0;k < matrix_2_R;k++)
+				{
+					resultant_matrix[i][j] += matrix_1[i][k] * matrix_2[k][j];
+				}
+			}
+		}
+		printf("First Matix : \n");
+		for(i = 0;i < matrix_1_R;i++)
+		{
+			for(j = 0;j < matrix_1_C;j++)
+			{
+				printf("%d\t" , matrix_1[i][j]);
+			}
+			printf("\n");
+		}
+		printf("Second Matix : \n");
+		for(i = 0;i < matrix_2_R;i++)
+		{
+			for(j = 0;j < matrix_2_C;j++)
+			{
+				printf("%d\t" , matrix_2[i][j]);
+			}
+			printf("\n");
+		}
+		printf("Resultant Matrix : \n");
+		for(i = 0;i < matrix_1_R;i++)
+		{
+			for(j = 0;j < matrix_2_C;j++)
+			{
+				printf("%d\t" , resultant_matrix[i][j]);
+			}
+			printf("\n");
+		}
+	}
+}
