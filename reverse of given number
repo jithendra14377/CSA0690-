@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+	long n, k = 0, n1 = 0;
+	printf("Enter the number to reverse : ");
+	scanf("%d" , &n);
+	while(n > 0)
+	{
+		k = n % 10;
+		n1 = n1 * 10 + k;
+		n = n / 10;
+	}
+	printf("Reversed of given number is : %d" , n1);
+}
