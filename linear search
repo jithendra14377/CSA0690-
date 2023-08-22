@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+	int n, m, a[n], i, temp = 0;
+	printf("Number of elements to be in the array : ");
+	scanf("%d" , &n);
+	printf("The elements of the array are : \n");
+	for(i = 0; i < n; i++)
+	{
+		scanf("%d" , &a[i]);
+	}
+	printf("Element to search in the array : ");
+	scanf("%d" , &m);
+	for(i = 0; i < n; i++)
+	{
+		if(a[i] == m)
+		{
+			printf("The element %d is at index %d in the array." , m, i);
+			temp = temp + 1;
+		}
+	}
+	if(temp == 0)
+	printf("The element %d is not present in the array." , m);
+}
